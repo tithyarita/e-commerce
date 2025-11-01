@@ -1,23 +1,23 @@
- <template>
+<template>
   <div id="app">
-    <h2></h2>
+    <h2>Categories</h2>
 
     <div class="category-list">
       <CategoryCom
         v-for="(cat, index) in categories"
-        :key="index"
+        :key="cat.title"
         :image="cat.image"
         :title="cat.title"
         :items="cat.items"
       />
     </div>
 
-    <h2></h2>
+    <h2>Promotions</h2>
 
     <div class="Promo-list">
       <PromotionCom
         v-for="(promo, index) in promotions"
-        :key="index"
+        :key="promo.title"
         :title="promo.title"
         :image="promo.image"
         :buttonLabel="promo.buttonLabel"
@@ -39,8 +39,7 @@ export default {
   data() {
     return {
       categories: [
-        {
-          image: 'img/cat-13 1.png',title: 'Cake & Milk',items: 14,},
+        { image: 'img/cat-13 1.png', title: 'Cake & Milk', items: 14 },
         { image: 'img/cat-14 1.png', title: 'Peach', items: 17 },
         { image: 'img/cat-12 1.png', title: 'Organic Kiwi', items: 21 },
         { image: 'img/cat-9 1.png', title: 'Red Apple', items: 68 },
@@ -79,6 +78,7 @@ export default {
   },
 }
 </script>
+
 
 <style>
 #app {
